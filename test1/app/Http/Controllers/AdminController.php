@@ -21,7 +21,7 @@ class AdminController extends Controller
     public function index()
     {
         //return (User::all());
-        //return view('Admin.pages.user.index',['users' => User::all()]);
+        return view('Admin.pages.user.index',['users' => User::all()]);
     }
 
     /**

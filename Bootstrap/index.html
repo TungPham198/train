@@ -13,20 +13,72 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="card bg-dark text-white">
-                <img class="card-img" src="..." alt="Card image">
-                <div class="card-img-overlay">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text">Last updated 3 mins ago</p>
+    <div class="row">
+        <div class="col-3 bg-info left">
+            <p class="h1">Giao diện Admin</p>
+            <ul class="nav flex-column">
+                <li class="nav-item md-3 border border-warning">
+                    <a class="nav-link active text-white h4 mx-auto " hr ef="#">Active</a>
+                </li>
+                <li class="nav-item md-3 border border-warning">
+                    <a class="nav-link text-white h4 mx-auto " hr ef="#">Link</a>
+                </li>
+                <li class="nav-item md-3 border border-warning">
+                    <a class="nav-link text-white h4 mx-auto " hr ef="#">Link</a>
+                </li>
+                <li class="nav-item md-3 border border-warning">
+                    <a class="nav-link disabled text-white h4 mx-auto " hr ef="#" tabindex="- 1" aria-disabled="t rue">Disabled</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-9">
+            <div class="top">
+                <nav class="navbar navbar-light bg-light">
+                    <form class="form-inline mx-auto">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+
+                    <ul class="navbar-nav">
+                        <!-- <li class="nav-item dropdown">
+                        </li> -->
+                        <li class="nav-item dropdown">
+                            <!-- <a class="navbar-brand dropdown-toggle" href="#">
+                                <img src="layouts.jpg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> Tài khoản
+                            </a> -->
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="layouts.jpg" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> Tài khoản
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="dow">
+                <div class="container">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <div class="main"></div>
-    <div class="footer"></div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

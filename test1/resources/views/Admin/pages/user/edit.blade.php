@@ -1,6 +1,6 @@
-@extends('Admin.index')
-@section('content')
-<div class="container">
+{{-- @extends('Admin.index')
+@section('content') --}}
+<div class="container" id="main">
     <h1 class="h3 mb-2 text-gray-800">sua người dùng</h1>
     @if ($errors->any())
         <div class="alert alert-danger">
@@ -35,4 +35,4 @@
         </form>
     </div>
 </div>
-@endsection
+{{-- @endsection --}}

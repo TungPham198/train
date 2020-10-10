@@ -5,8 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use \Validator;
-
+use Validator;
 class AdminController extends Controller
 {
 
@@ -31,6 +30,7 @@ class AdminController extends Controller
      */
     public function create()
     {
+        // echo "ok";
         return view('Admin.pages.user.add');
     }
 
@@ -42,7 +42,7 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = $request->validate( [
+        $validator = Validator::make($request->all(), [
             'name' => 'required|min:3',
             'email' => 'required|unique:users',
             'password' => 'required',
@@ -53,16 +53,18 @@ class AdminController extends Controller
             'email.unique' => 'trùng mail rồi má',
             'password.required' => 'không nhập pass à',
         ]);
-        if($validator){
+        if($validator->passes()){
             $user = User::create([
                 'name' =>$request->name,
                 'email' =>$request->email,
                 'password' => bcrypt($request->password)
             ]);
             $user->save();
-            return redirect('/admin/user')->with('success','Thêm thành công');
+            //return redirect('/admin/user')->with('success','Thêm thành công');
+            // return response()->json(['success'=>$request->all()]);
+            return view("Admin.pages.user.list",['users' => User::all()]);
         }
-        
+        return response()->json(['error'=>$validator->errors()->all()]);
     }
 
     /**
@@ -84,6 +86,7 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
+        // echo "ok";
         $user = User::find($id);
         return view('Admin.pages.user.edit',['user'=>$user]);
     }
